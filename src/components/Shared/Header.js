@@ -27,6 +27,7 @@ const Header = () => {
      <li><Link to='/skills'>Skill</Link></li>
      <li><Link to='/projects'>Project</Link></li>
      <li><Link to='/contact'>Contact</Link></li>
+     <li><a href="Muhib resume updated.pdf" download='Muhib resume updated.pdf'><button className='btn btn-accent'>Resume</button></a></li>
     </ul>
   </div>
  
