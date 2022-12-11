@@ -5,11 +5,15 @@ const Contact = () => {
 	const form = useRef();
 	const sendEmail = (e) => {
 		e.preventDefault();
-		console.log(e);
+		
 	
 		emailjs.sendForm('service_4tfnllp', 'template_i687wxn', form.current, 'LgEEOSpCAzIdLTMER')
 		  .then((result) => {
-			  console.log(result.text);
+			if(result.text==="OK"){
+				alert('Message send');
+
+			}
+			
 		  }, (error) => {
 			  console.log(error.text);
 		  });
@@ -41,21 +45,7 @@ const Contact = () => {
 				</p>
 			</div>
 		</div>
-		{/* <form  ref={form} onSubmit={sendEmail} className="flex flex-col py-6 space-y-6 md:py-0 md:px-6 ng-untouched ng-pristine ng-valid">
-			<label className="block">
-				<span className="mb-1">Full name</span>
-				<input type="text" placeholder="Your Name" className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-orange-400 bg-white" />
-			</label>
-			<label className="block">
-				<span className="mb-1">Email address</span>
-				<input type="email" placeholder="Your Email" className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-orange-400 bg-white" />
-			</label>
-			<label className="block">
-				<span className="mb-1">Message</span>
-				<textarea rows="3" className="block w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-orange-400 bg-white"></textarea>
-			</label>
-			<button type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-orange-300 text-black focus:ring-orange-300 hover:ring-orange-400">Submit</button>
-		</form> */}
+	
 		 <form ref={form} onSubmit={sendEmail} className="flex flex-col py-6 space-y-6 md:py-0 md:px-6 ng-untouched ng-pristine ng-valid">
       <label className="block">Name</label>
       <input type="text" name="user_name" className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-orange-400 bg-white"/>

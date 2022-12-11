@@ -6,7 +6,7 @@ import project3 from '../../acc/project3.png'
 const Projects = () => {
     return (
         <div className='mt-3'>
-            <h1 className='text-center'>Recent Project</h1>
+            <h1 className='text-center text-3xl font-bold my-3'>Recent Project</h1>
 <div className='grid grid-cols-1 md:grid-cols-3 gap-3 justify-items-center'>
 <div className="card w-96 bg-base-100 shadow-xl">
   <figure><img className='h-64' src={project1} alt="Shoes" /></figure>

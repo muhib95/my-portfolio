@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../acc/logo-black.png'
 
 const Header = () => {
     return (
@@ -16,9 +17,10 @@ const Header = () => {
      <li><Link to='/skills'>Skill</Link></li>
      <li><Link to='/projects'>Project</Link></li>
      <li><Link to='/contact'>Contact</Link></li>
+     <li><a href="Muhib resume updated.pdf" download='Muhib resume updated.pdf'><button className='btn btn-accent'>Download Resume</button></a></li>
       </ul>
     </div>
-    {/* <a className="btn btn-ghost normal-case text-xl">daisyUI</a> */}
+    <Link to='/' className="btn btn-ghost normal-case text-xl"><img className='w-52' src={logo} alt="" /></Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal p-0">
@@ -27,7 +29,7 @@ const Header = () => {
      <li><Link to='/skills'>Skill</Link></li>
      <li><Link to='/projects'>Project</Link></li>
      <li><Link to='/contact'>Contact</Link></li>
-     <li><a href="Muhib resume updated.pdf" download='Muhib resume updated.pdf'><button className='btn btn-accent'>Resume</button></a></li>
+     <li><a href="Muhib resume updated.pdf" download='Muhib resume updated.pdf'><button className='btn btn-accent'>Download Resume</button></a></li>
     </ul>
   </div>
  
